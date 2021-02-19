@@ -190,7 +190,7 @@ class DialogComprar(QDialog, Ui_DialogComprar):
             if valor == productos[i]['codigo']:
                 return True, i
                 break
-        return False
+        return False, 0
 
     def reiniciarLe(self):
         self.le_codigo.setText('')
@@ -208,6 +208,35 @@ class DialogTabla(QDialog, Ui_DialogTabla):
         self.setupUi(self)
 
         self.btn_volver.clicked.connect(self.volver)
+        self.btn_ordenar_categoria.clicked.connect(self.ordenar_por_categoria)
+        self.btn_ordenar_precio.clicked.connect(self.ordenar_por_precio)
+
+
+    @Slot()
+    def ordenar_por_precio(self):
+        ordenado = True
+
+        while ordenado == True:
+            ordenado = False
+            for i in range(len(productos)-1):
+                if productos[i]['precio'] < productos[i+1]['precio']:
+                    productos[i], productos[i+1] = productos[i+1], productos[i]
+                    ordenado = True
+        
+        self.actualizar_tabla()
+
+    @Slot()
+    def ordenar_por_categoria(self):
+        ordenado = True
+
+        while ordenado == True:
+            ordenado = False
+            for i in range(len(productos)-1):
+                if productos[i]['categoria'] < productos[i+1]['categoria']:
+                    productos[i], productos[i+1] = productos[i+1], productos[i]
+                    ordenado = True
+
+        self.actualizar_tabla()
 
     @Slot()
     def volver(self):

@@ -40,6 +40,12 @@ class Ui_DialogTabla(object):
 "border: none;\n"
 "color: white;\n"
 "font-weight: bold;")
+        self.btn_ordenar_categoria = QPushButton(Dialog)
+        self.btn_ordenar_categoria.setObjectName(u"btn_ordenar_categoria")
+        self.btn_ordenar_categoria.setGeometry(QRect(260, 400, 121, 23))
+        self.btn_ordenar_precio = QPushButton(Dialog)
+        self.btn_ordenar_precio.setObjectName(u"btn_ordenar_precio")
+        self.btn_ordenar_precio.setGeometry(QRect(400, 400, 121, 23))
 
         self.retranslateUi(Dialog)
 
@@ -48,7 +54,6 @@ class Ui_DialogTabla(object):
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
-        
         ___qtablewidgetitem = self.tabla.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Dialog", u"C\u00f3digo", None));
         ___qtablewidgetitem1 = self.tabla.horizontalHeaderItem(1)
@@ -60,5 +65,7 @@ class Ui_DialogTabla(object):
         ___qtablewidgetitem4 = self.tabla.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("Dialog", u"Precio", None));
         self.btn_volver.setText(QCoreApplication.translate("Dialog", u"Volver", None))
+        self.btn_ordenar_categoria.setText(QCoreApplication.translate("Dialog", u"Ordenar por Categor\u00eda", None))
+        self.btn_ordenar_precio.setText(QCoreApplication.translate("Dialog", u"Ordenar por Precio", None))
     # retranslateUi
 

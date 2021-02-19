@@ -48,7 +48,7 @@
     </property>
    </column>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="btn_volver">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -65,6 +65,32 @@ font-weight: bold;</string>
    </property>
    <property name="text">
     <string>Volver</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_ordenar_categoria">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>400</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ordenar por Categoría</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_ordenar_precio">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>400</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ordenar por Precio</string>
    </property>
   </widget>
  </widget>
